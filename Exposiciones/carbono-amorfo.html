@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbono Amorfo - Material Didáctico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #764ba2, #667eea);
+        }
+
+        .nav-btn.active {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        }
+
+        .section {
+            display: none;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #4ecdc4;
+        }
+
+        .card p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .structure-comparison {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .structure-box {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            min-width: 200px;
+        }
+
+        .structure-visual {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .amorphous {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24) !important;
+        }
+
+        .crystalline {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d) !important;
+        }
+
+        .uses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .use-item {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .use-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .use-item h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #4ecdc4;
+        }
+
+        .interactive-demo {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .demo-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .demo-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .quiz-container {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .quiz-question {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .quiz-option {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .quiz-option:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: #4ecdc4;
+        }
+
+        .quiz-option.correct {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            border-color: #4ecdc4;
+        }
+
+        .quiz-option.incorrect {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border-color: #ff6b6b;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .section {
+                padding: 20px;
+            }
+            .structure-comparison {
+                flex-direction: column;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔬 CARBONO AMORFO 🔬</h1>
+            <p>Material Didáctico Interactivo - Estructura, Propiedades y Aplicaciones</p>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn active" onclick="showSection('definition')">¿Qué es?</button>
+            <button class="nav-btn" onclick="showSection('properties')">Propiedades</button>
+            <button class="nav-btn" onclick="showSection('uses')">Usos</button>
+            <button class="nav-btn" onclick="showSection('quiz')">Quiz</button>
+        </div>
+
+        <!-- SECCIÓN 1: DEFINICIÓN -->
+        <div id="definition" class="section active">
+            <h2>¿Qué es el Carbono Amorfo?</h2>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <h3>🔍 Definición</h3>
+                    <p>El carbono amorfo es una forma del carbono sin estructura cristalina ordenada. Los átomos están dispuestos de manera irregular y desordenada.</p>
+                </div>
+                <div class="card">
+                    <h3>🌡️ Formación</h3>
+                    <p>Se forma por combustión incompleta de materiales orgánicos, descomposición térmica y procesamiento industrial.</p>
+                </div>
+            </div>
+
+            <div class="structure-comparison">
+                <div class="structure-box">
+                    <div class="structure-visual crystalline">💎</div>
+                    <h3>Carbono Cristalino</h3>
+                    <p>Estructura ordenada<br>Ejemplo: Diamante</p>
+                </div>
+                <div class="structure-box">
+                    <div class="structure-visual amorphous">⚫</div>
+                    <h3>Carbono Amorfo</h3>
+                    <p>Estructura desordenada<br>Ejemplo: Carbón</p>
+                </div>
+            </div>
+
+            <div class="interactive-demo">
+                <h3>💡 Analogía Visual</h3>
+                <button class="demo-button" onclick="showAnalogy()">Ver Analogía del Ejército vs Multitud</button>
+                <div id="analogy" style="display: none; margin-top: 20px; font-size: 1.2em;">
+                    <p><strong>Carbono Cristalino:</strong> 👥👥👥👥 (Soldados en formación perfecta)</p>
+                    <p><strong>Carbono Amorfo:</strong> 🚶‍♂️🚶‍♀️🧍‍♂️🚶‍♂️ (Personas caminando libremente)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: PROPIEDADES -->
+        <div id="properties" class="section">
+            <h2>Propiedades del Carbono Amorfo</h2>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <h3>🎨 Propiedades Físicas</h3>
+                    <p><strong>Color:</strong> Negro o gris oscuro<br>
+                    <strong>Textura:</strong> Opaca, no reflectante<br>
+                    <strong>Dureza:</strong> Relativamente blando<br>
+                    <strong>Estructura:</strong> Porosa y liviana</p>
+                </div>
+                <div class="card">
+                    <h3>⚗️ Propiedades Químicas</h3>
+                    <p><strong>Reactividad:</strong> Se combina fácilmente con oxígeno<br>
+                    <strong>Adsorción:</strong> Atrapa moléculas en su superficie<br>
+                    <strong>Conductividad:</strong> Conductor parcial de electricidad<br>
+                    <strong>Estabilidad:</strong> Estable a temperatura ambiente</p>
+                </div>
+            </div>
+
+            <div class="interactive-demo">
+                <h3>🔬 Comparación Interactiva</h3>
+                <button class="demo-button" onclick="showComparison()">Comparar con Otras Formas de Carbono</button>
+                <div id="comparison" style="display: none; margin-top: 20px;">
+                    <div class="content-grid">
+                        <div class="card" style="background: rgba(255,107,107,0.2);">
+                            <h3>💎 Diamante</h3>
+                            <p>Durísimo, transparente, estructura perfecta, muy conductor térmico</p>
+                        </div>
+                        <div class="card" style="background: rgba(68,160,141,0.2);">
+                            <h3>📝 Grafito</h3>
+                            <p>Conductor eléctrico, brillante, se desliza fácilmente, estructura laminar</p>
+                        </div>
+                        <div class="card" style="background: rgba(238,90,36,0.2);">
+                            <h3>⚫ Carbono Amorfo</h3>
+                            <p>Intermedio, poroso, versátil, gran capacidad de adsorción</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: USOS -->
+        <div id="uses" class="section">
+            <h2>Usos y Aplicaciones</h2>
+            
+            <div class="content-grid">
+                <div class="card">
+                    <h3>🏠 En el Hogar</h3>
+                    <p>Carbón vegetal para barbacoas, filtros de agua, carboncillos para arte, residuos de combustión</p>
+                </div>
+                <div class="card">
+                    <h3>🏭 En la Industria</h3>
+                    <p>Negro de humo para neumáticos, tintas y pinturas, electrodos, procesos de filtración</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin: 40px 0 20px;">🔍 Aplicaciones Específicas</h3>
+            <div class="uses-grid">
+                <div class="use-item">
+                    <h4>💊 Medicina</h4>
+                    <p>Carbón activado para intoxicaciones</p>
+                </div>
+                <div class="use-item">
+                    <h4>🚗 Automóviles</h4>
+                    <p>Negro de humo en neumáticos</p>
+                </div>
+                <div class="use-item">
+                    <h4>💧 Purificación</h4>
+                    <p>Filtros de agua y aire</p>
+                </div>
+                <div class="use-item">
+                    <h4>🎨 Arte</h4>
+                    <p>Carboncillos y pigmentos</p>
+                </div>
+                <div class="use-item">
+                    <h4>💄 Cosméticos</h4>
+                    <p>Máscaras y delineadores</p>
+                </div>
+                <div class="use-item">
+                    <h4>🔥 Energía</h4>
+                    <p>Combustible y calefacción</p>
+                </div>
+            </div>
+
+            <div class="interactive-demo">
+                <button class="demo-button" onclick="showEconomicImpact()">Ver Impacto Económico</button>
+                <div id="economic" style="display: none; margin-top: 20px; text-align: center;">
+                    <h3>💰 Importancia Económica</h3>
+                    <p style="font-size: 1.2em; line-height: 1.6;">
+                        • La industria del carbón activado mueve <strong>miles de millones de dólares</strong> anualmente<br>
+                        • Esencial en la fabricación de <strong>1.3 mil millones de neumáticos</strong> al año<br>
+                        • Vital para la purificación de <strong>agua potable mundial</strong><br>
+                        • Empleos directos e indirectos para <strong>millones de personas</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 4: QUIZ -->
+        <div id="quiz" class="section">
+            <h2>🧠 Quiz Interactivo</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    1. ¿Cuál es la principal característica estructural del carbono amorfo?
+                </div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Estructura cristalina perfecta</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, true)">Estructura desordenada e irregular</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Estructura laminar como el grafito</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Estructura cúbica como el diamante</div>
+                </div>
+            </div>
+
+            <div class="quiz-container" style="margin-top: 20px;">
+                <div class="quiz-question">
+                    2. ¿Cuál NO es una aplicación común del carbono amorfo?
+                </div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Filtros de agua</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Negro de humo en neumáticos</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, true)">Joyas y piedras preciosas</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Carboncillos para dibujo</div>
+                </div>
+            </div>
+
+            <div class="quiz-container" style="margin-top: 20px;">
+                <div class="quiz-question">
+                    3. ¿Qué propiedad hace útil al carbono amorfo para filtración?
+                </div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Su dureza extrema</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, true)">Su estructura porosa y capacidad de adsorción</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Su transparencia</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, false)">Su conductividad eléctrica perfecta</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📚 Material creado para la exposición de Carbono Amorfo</p>
+            <p>🔬 Química - Estructuras del Carbono</p>
+            <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">© 2025 - Todos los derechos reservados a @sam4r3sv</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remover clase active de todos los botones
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Mostrar la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Activar el botón correspondiente
+            event.target.classList.add('active');
+        }
+
+        function showAnalogy() {
+            const analogy = document.getElementById('analogy');
+            if (analogy.style.display === 'none') {
+                analogy.style.display = 'block';
+                analogy.style.animation = 'fadeInUp 0.6s ease';
+            } else {
+                analogy.style.display = 'none';
+            }
+        }
+
+        function showComparison() {
+            const comparison = document.getElementById('comparison');
+            if (comparison.style.display === 'none') {
+                comparison.style.display = 'block';
+                comparison.style.animation = 'fadeInUp 0.6s ease';
+            } else {
+                comparison.style.display = 'none';
+            }
+        }
+
+        function showEconomicImpact() {
+            const economic = document.getElementById('economic');
+            if (economic.style.display === 'none') {
+                economic.style.display = 'block';
+                economic.style.animation = 'fadeInUp 0.6s ease';
+            } else {
+                economic.style.display = 'none';
+            }
+        }
+
+        function checkAnswer(element, isCorrect) {
+            // Remover clases previas
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            options.forEach(option => {
+                option.classList.remove('correct', 'incorrect');
+            });
+
+            // Agregar clase según la respuesta
+            if (isCorrect) {
+                element.classList.add('correct');
+                setTimeout(() => {
+                    alert('¡Correcto! 🎉 Excelente conocimiento sobre carbono amorfo.');
+                }, 100);
+            } else {
+                element.classList.add('incorrect');
+                // Mostrar la respuesta correcta
+                options.forEach(option => {
+                    if (option.getAttribute('onclick').includes('true')) {
+                        option.classList.add('correct');
+                    }
+                });
+                setTimeout(() => {
+                    alert('Incorrecto. 🤔 La respuesta correcta está marcada en verde.');
+                }, 100);
+            }
+        }
+
+        // Efecto de partículas (opcional)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Crear efecto visual sutil
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) rotate(0.5deg)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) rotate(0deg)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

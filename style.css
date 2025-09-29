@@ -1,0 +1,18 @@
+/* Estilos para el efecto interactivo */
+.presentation-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none; /* Quitar borde de tarjeta */
+}
+
+/* Efecto de "levantamiento" al pasar el ratón */
+.presentation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Títulos más grandes en dispositivos grandes */
+@media (min-width: 768px) {
+    .card-title {
+        font-size: 1.5rem;
+    }
+}
