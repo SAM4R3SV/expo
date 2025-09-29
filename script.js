@@ -2,10 +2,10 @@
 // Solo necesitas añadir el nombre del nuevo archivo HTML a este array.
 const presentationFiles = [
     // La ruta es 'exposiciones/' + nombre_del_archivo
-    "exposiciones/vaper_tussy_presentation.html",
-    "exposiciones/carbono-amorfo.html",
-    "exposiciones/deep_learning_introduccion.html",
-    "exposiciones/ciberseguridad_moviles.html",
+    "Exposiciones/vaper_tussy_presentation.html",
+    "Exposiciones/carbono-amorfo.html",
+    "Exposiciones/deep_learning_introduccion.html",
+    "Exposiciones/ciberseguridad_moviles.html",
     // **AQUÍ DEBES AÑADIR LOS NOMBRES DE TUS FUTURAS EXPOSICIONES**
 ];
 
