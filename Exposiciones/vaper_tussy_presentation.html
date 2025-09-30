@@ -1,5 +1,7 @@
+`
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,32 +15,32 @@
             --danger-color: #e74c3c;
             --warning-color: #f39c12;
             --dark-color: #2c3e50;
-            --light-bg: #ecf0f1;
+            --light-bg: #ecf0f1
         }
 
         .vaper-mode {
             --primary-color: #3498db;
             --secondary-color: #2ecc71;
-            --accent-color: #9b59b6;
+            --accent-color: #9b59b6
         }
 
         .tussy-mode {
             --primary-color: #e74c3c;
             --secondary-color: #f39c12;
-            --accent-color: #8e44ad;
+            --accent-color: #8e44ad
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             min-height: 100vh;
-            transition: all 0.5s ease;
+            transition: all .5s ease
         }
 
         .navbar {
-            background: rgba(255, 255, 255, 0.95) !important;
+            background: rgba(255, 255, 255, .95) !important;
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, .1)
         }
 
         .mode-toggle {
@@ -47,16 +49,16 @@
             color: white;
             padding: 10px 20px;
             border-radius: 50px;
-            transition: all 0.3s ease;
+            transition: all .3s ease
         }
 
         .mode-toggle:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .2)
         }
 
         .hero-section {
-            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
+            background: linear-gradient(135deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .2));
             backdrop-filter: blur(10px);
             border-radius: 20px;
             margin: 2rem 0;
@@ -64,7 +66,7 @@
             text-align: center;
             color: white;
             position: relative;
-            overflow: hidden;
+            overflow: hidden
         }
 
         .hero-section::before {
@@ -74,53 +76,62 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background: radial-gradient(circle, rgba(255, 255, 255, .1) 1px, transparent 1px);
             background-size: 20px 20px;
-            animation: float 20s linear infinite;
+            animation: float 20s linear infinite
         }
 
         @keyframes float {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            100% { transform: translate(-20px, -20px) rotate(360deg); }
+            0% {
+                transform: translate(0, 0) rotate(0deg)
+            }
+
+            100% {
+                transform: translate(-20px, -20px) rotate(360deg)
+            }
         }
 
         .tab-content {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, .95);
             border-radius: 15px;
             padding: 2rem;
             margin-top: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+            backdrop-filter: blur(10px)
         }
 
         .nav-pills .nav-link {
             border-radius: 50px;
             margin: 0 5px;
             padding: 12px 24px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: all .3s ease;
+            border: 2px solid transparent
         }
 
         .nav-pills .nav-link.active {
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .2)
         }
 
-        .component-card, .method-card, .effect-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+        .component-card,
+        .method-card,
+        .effect-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, .9), rgba(255, 255, 255, .7));
             border-radius: 15px;
             padding: 1.5rem;
             margin: 1rem 0;
             border-left: 5px solid var(--primary-color);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            transition: all .3s ease
         }
 
-        .component-card:hover, .method-card:hover, .effect-card:hover {
+        .component-card:hover,
+        .method-card:hover,
+        .effect-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .15)
         }
 
         .molecular-structure {
@@ -129,23 +140,23 @@
             padding: 1rem;
             margin: 1rem 0;
             text-align: center;
-            border: 2px dashed var(--primary-color);
+            border: 2px dashed var(--primary-color)
         }
 
         .health-impact {
-            background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(231, 76, 60, 0.05));
+            background: linear-gradient(135deg, rgba(231, 76, 60, .1), rgba(231, 76, 60, .05));
             border-left: 5px solid var(--danger-color);
             border-radius: 10px;
             padding: 1.5rem;
-            margin: 1rem 0;
+            margin: 1rem 0
         }
 
         .warning-box {
-            background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(243, 156, 18, 0.05));
+            background: linear-gradient(135deg, rgba(243, 156, 18, .1), rgba(243, 156, 18, .05));
             border: 2px solid var(--warning-color);
             border-radius: 15px;
             padding: 1.5rem;
-            margin: 1.5rem 0;
+            margin: 1.5rem 0
         }
 
         .image-placeholder {
@@ -159,32 +170,32 @@
             color: #6c757d;
             margin: 1rem 0;
             border: 2px dashed #dee2e6;
-            transition: all 0.3s ease;
+            transition: all .3s ease
         }
 
         .image-placeholder:hover {
             border-color: var(--primary-color);
-            color: var(--primary-color);
+            color: var(--primary-color)
         }
 
         .statistic-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+            background: linear-gradient(135deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .85));
             border-radius: 15px;
             padding: 2rem;
             text-align: center;
             margin: 1rem 0;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+            border-top: 4px solid var(--primary-color)
         }
 
         .chemical-formula {
             font-family: 'Courier New', monospace;
             background: #f8f9fa;
-            padding: 0.5rem;
+            padding: .5rem;
             border-radius: 5px;
             border: 1px solid #dee2e6;
             display: inline-block;
-            margin: 0.5rem;
+            margin: .5rem
         }
 
         .organ-effect {
@@ -192,20 +203,20 @@
             align-items: center;
             margin: 1rem 0;
             padding: 1rem;
-            background: rgba(255,255,255,0.7);
+            background: rgba(255, 255, 255, .7);
             border-radius: 10px;
-            transition: all 0.3s ease;
+            transition: all .3s ease
         }
 
         .organ-effect:hover {
-            background: rgba(255,255,255,0.9);
-            transform: translateX(5px);
+            background: rgba(255, 255, 255, .9);
+            transform: translateX(5px)
         }
 
         .process-step {
             position: relative;
             padding-left: 3rem;
-            margin: 1.5rem 0;
+            margin: 1.5rem 0
         }
 
         .process-step::before {
@@ -223,34 +234,42 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-weight: bold
         }
 
         .process-container {
-            counter-reset: step-counter;
+            counter-reset: step-counter
         }
 
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
+            animation: fadeInUp .6s ease forwards
         }
 
         @keyframes fadeInUp {
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0)
             }
         }
 
         .pulse-animation {
-            animation: pulse 2s infinite;
+            animation: pulse 2s infinite
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.05)
+            }
+
+            100% {
+                transform: scale(1)
+            }
         }
 
         .floating-particles {
@@ -260,112 +279,101 @@
             right: 0;
             bottom: 0;
             overflow: hidden;
-            pointer-events: none;
+            pointer-events: none
         }
 
         .particle {
             position: absolute;
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, .3);
             border-radius: 50%;
-            animation: floatUp 6s infinite linear;
+            animation: floatUp 6s infinite linear
         }
 
         @keyframes floatUp {
             0% {
                 transform: translateY(100vh) scale(0);
-                opacity: 0;
+                opacity: 0
             }
+
             50% {
-                opacity: 1;
+                opacity: 1
             }
+
             100% {
                 transform: translateY(-10vh) scale(1);
-                opacity: 0;
+                opacity: 0
             }
         }
 
         .comparison-table {
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, .95);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .1)
         }
 
         .comparison-table th {
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             color: white;
             border: none;
-            padding: 1.5rem;
+            padding: 1.5rem
         }
 
         .comparison-table td {
             padding: 1rem 1.5rem;
             border: none;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, .1)
         }
 
         .risk-level-high {
-            background: linear-gradient(135deg, rgba(231, 76, 60, 0.2), rgba(231, 76, 60, 0.1));
-            border-left: 5px solid #e74c3c;
+            background: linear-gradient(135deg, rgba(231, 76, 60, .2), rgba(231, 76, 60, .1));
+            border-left: 5px solid #e74c3c
         }
 
         .risk-level-medium {
-            background: linear-gradient(135deg, rgba(243, 156, 18, 0.2), rgba(243, 156, 18, 0.1));
-            border-left: 5px solid #f39c12;
+            background: linear-gradient(135deg, rgba(243, 156, 18, .2), rgba(243, 156, 18, .1));
+            border-left: 5px solid #f39c12
         }
 
         .risk-level-low {
-            background: linear-gradient(135deg, rgba(46, 204, 113, 0.2), rgba(46, 204, 113, 0.1));
-            border-left: 5px solid #2ecc71;
+            background: linear-gradient(135deg, rgba(46, 204, 113, .2), rgba(46, 204, 113, .1));
+            border-left: 5px solid #2ecc71
         }
 
-        @media (max-width: 768px) {
+        @media (max-width:768px) {
             .hero-section {
-                padding: 2rem 1rem;
+                padding: 2rem 1rem
             }
-            
+
             .tab-content {
-                padding: 1rem;
+                padding: 1rem
             }
-            
+
             .mode-toggle {
                 padding: 8px 16px;
-                font-size: 0.9rem;
+                font-size: .9rem
             }
         }
     </style>
 </head>
+
 <body class="vaper-mode">
     <div class="floating-particles"></div>
-    
     <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="fas fa-microscope me-2"></i>
-                Análisis Químico: Vaper & Tussy
-            </a>
-            <div class="d-flex">
-                <button class="mode-toggle me-3" id="modeToggle">
-                    <i class="fas fa-sync-alt me-2"></i>
-                    <span id="modeText">Cambiar a Tussy</span>
-                </button>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+        <div class="container"><a class="navbar-brand fw-bold" href="#"><i class="fas fa-microscope me-2"></i>Análisis
+                Químico: Vaper & Tussy</a>
+            <div class="d-flex"><button class="mode-toggle me-3" id="modeToggle"><i
+                        class="fas fa-sync-alt me-2"></i><span id="modeText">Cambiar a Tussy</span></button><button
+                    class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span
+                        class="navbar-toggler-icon"></span></button></div>
         </div>
     </nav>
-
     <div class="container my-4">
         <div class="hero-section fade-in">
-            <h1 class="display-4 fw-bold mb-4">
-                <i class="fas fa-flask me-3"></i>
-                <span id="heroTitle">VAPER: Análisis Químico y Salud</span>
-            </h1>
-            <p class="lead mb-4" id="heroSubtitle">
-                Estudio profundo de los componentes químicos, métodos de preparación, empaquetado, 
-                inhalación y efectos corporales del vapeo electrónico
-            </p>
+            <h1 class="display-4 fw-bold mb-4"><i class="fas fa-flask me-3"></i><span id="heroTitle">VAPER: Análisis
+                    Químico y Salud</span></h1>
+            <p class="lead mb-4" id="heroSubtitle">Estudio profundo de los componentes químicos, métodos de preparación,
+                empaquetado, inhalación y efectos corporales del vapeo electrónico</p>
             <div class="row">
                 <div class="col-md-4">
                     <div class="statistic-card pulse-animation">
@@ -387,1363 +395,48 @@
                 </div>
             </div>
         </div>
-
         <ul class="nav nav-pills justify-content-center mb-4" id="mainTabs" role="tablist">
-            <li class="nav-item">
-                <button class="nav-link active" id="componentes-tab" data-bs-toggle="pill" data-bs-target="#componentes">
-                    <i class="fas fa-atom me-2"></i>Componentes
-                </button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="preparacion-tab" data-bs-toggle="pill" data-bs-target="#preparacion">
-                    <i class="fas fa-flask me-2"></i>Preparación
-                </button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="empaquetado-tab" data-bs-toggle="pill" data-bs-target="#empaquetado">
-                    <i class="fas fa-box me-2"></i>Empaquetado
-                </button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="inhalacion-tab" data-bs-toggle="pill" data-bs-target="#inhalacion">
-                    <i class="fas fa-lungs me-2"></i>Inhalación
-                </button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="efectos-tab" data-bs-toggle="pill" data-bs-target="#efectos">
-                    <i class="fas fa-heartbeat me-2"></i>Efectos Corporales
-                </button>
-            </li>
+            <li class="nav-item"><button class="nav-link active" id="componentes-tab" data-bs-toggle="pill"
+                    data-bs-target="#componentes"><i class="fas fa-atom me-2"></i>Componentes</button></li>
+            <li class="nav-item"><button class="nav-link" id="preparacion-tab" data-bs-toggle="pill"
+                    data-bs-target="#preparacion"><i class="fas fa-flask me-2"></i>Preparación</button></li>
+            <li class="nav-item"><button class="nav-link" id="empaquetado-tab" data-bs-toggle="pill"
+                    data-bs-target="#empaquetado"><i class="fas fa-box me-2"></i>Empaquetado</button></li>
+            <li class="nav-item"><button class="nav-link" id="inhalacion-tab" data-bs-toggle="pill"
+                    data-bs-target="#inhalacion"><i class="fas fa-lungs me-2"></i>Inhalación</button></li>
+            <li class="nav-item"><button class="nav-link" id="efectos-tab" data-bs-toggle="pill"
+                    data-bs-target="#efectos"><i class="fas fa-heartbeat me-2"></i>Efectos Corporales</button></li>
         </ul>
-
         <div class="tab-content">
             <div class="tab-pane fade show active" id="componentes">
-                <h2 class="text-center mb-4">
-                    <i class="fas fa-atom me-3"></i>
-                    <span id="componentesTitle">Componentes Químicos del Vaper</span>
-                </h2>
-                
-                <div class="row" id="componentesContent">
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-tint me-2 text-primary"></i>Glicerina Vegetal (VG)</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₃H₈O₃</div>
-                                <p class="mb-0">Estructura molecular del glicerol</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Viscosidad: Alta</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Punto de ebullición: 290°C</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Función: Producción de vapor</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Descomposición: Genera acroleína >280°C</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-droplet me-2 text-info"></i>Propilenglicol (PG)</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₃H₈O₂</div>
-                                <p class="mb-0">1,2-propanodiol</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Viscosidad: Baja</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Punto de ebullición: 188°C</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Función: Transporte de sabor</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Irritación: Vías respiratorias</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-leaf me-2 text-success"></i>Nicotina</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₁₀H₁₄N₂</div>
-                                <p class="mb-0">Alcaloide natural</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Concentración: 0-50mg/ml</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Absorción: Pulmonar rápida</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Dependencia: Alta</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Toxicidad: 0.5-1mg/kg</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-palette me-2 text-secondary"></i>Aromatizantes</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">Diversos compuestos</div>
-                                <p class="mb-0">Aldehídos, ésteres, cetonas</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Variedad: 8000+ sabores</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Diacetilo: Causa popcorn lung</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Benzaldehído: Irritante</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Cinamaldehído: Citotóxico</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="warning-box mt-4">
-                    <h5><i class="fas fa-exclamation-triangle text-warning me-2"></i>Productos de Descomposición Térmica</h5>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="molecular-structure">
-                                <strong>Formaldehído</strong>
-                                <div class="chemical-formula">HCHO</div>
-                                <small>Carcinógeno Grupo 1</small>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="molecular-structure">
-                                <strong>Acetaldehído</strong>
-                                <div class="chemical-formula">CH₃CHO</div>
-                                <small>Posible carcinógeno</small>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="molecular-structure">
-                                <strong>Acroleína</strong>
-                                <div class="chemical-formula">C₃H₄O</div>
-                                <small>Irritante severo</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-center mb-4"><i class="fas fa-atom me-3"></i><span id="componentesTitle">Componentes
+                        Químicos del Vaper</span></h2>
+                <div id="componentesContent"></div>
             </div>
-
             <div class="tab-pane fade" id="preparacion">
-                <h2 class="text-center mb-4">
-                    <i class="fas fa-flask me-3"></i>
-                    <span id="preparacionTitle">Métodos de Preparación</span>
-                </h2>
-                
-                <div id="preparacionContent">
-                    <div class="process-container">
-                        <div class="process-step">
-                            <div class="method-card">
-                                <h4>Mezclado de Base</h4>
-                                <p>La base del e-líquido se prepara mezclando propilenglicol (PG) y glicerina vegetal (VG) en proporciones específicas. Las ratios comunes incluyen:</p>
-                                <ul>
-                                    <li><strong>50/50:</strong> Equilibrio entre sabor y vapor</li>
-                                    <li><strong>70/30 VG/PG:</strong> Más vapor, menos golpe de garganta</li>
-                                    <li><strong>30/70 VG/PG:</strong> Más sabor, mejor para dispositivos MTL</li>
-                                </ul>
-                                <div class="image-placeholder">
-                                    <i class="fas fa-flask fa-3x"></i>
-                                    <div class="ms-3">Proceso de mezclado PG/VG</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="process-step">
-                            <div class="method-card">
-                                <h4>Adición de Nicotina</h4>
-                                <p>La nicotina se añade en forma de:</p>
-                                <ul>
-                                    <li><strong>Nicotina freebase:</strong> Forma tradicional, pH alcalino</li>
-                                    <li><strong>Sales de nicotina:</strong> Combinada con ácidos orgánicos</li>
-                                </ul>
-                                <div class="molecular-structure">
-                                    <h6>Transformación química:</h6>
-                                    <div class="chemical-formula">C₁₀H₁₄N₂ + ácido → sal de nicotina</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="process-step">
-                            <div class="method-card">
-                                <h4>Incorporación de Aromatizantes</h4>
-                                <p>Los concentrados de sabor se añaden típicamente en concentraciones del 5-20%. Los aromatizantes pueden incluir:</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul>
-                                            <li>Ésteres frutales</li>
-                                            <li>Aldehídos</li>
-                                            <li>Terpenos</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <ul>
-                                            <li>Vanillina</li>
-                                            <li>Mentol</li>
-                                            <li>Compuestos lácteos</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="process-step">
-                            <div class="method-card">
-                                <h4>Proceso de Maduración</h4>
-                                <p>El e-líquido se deja reposar para permitir la homogenización molecular y el desarrollo completo del sabor. Este proceso puede durar:</p>
-                                <ul>
-                                    <li>Sabores frutales: 1-2 semanas</li>
-                                    <li>Sabores cremosos: 4-6 semanas</li>
-                                    <li>Sabores de tabaco: 6-8 semanas</li>
-                                </ul>
-                                <div class="image-placeholder">
-                                    <i class="fas fa-clock fa-3x"></i>
-                                    <div class="ms-3">Tiempo de maduración</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-center mb-4"><i class="fas fa-flask me-3"></i><span id="preparacionTitle">Métodos de
+                        Preparación</span></h2>
+                <div id="preparacionContent"></div>
             </div>
-
             <div class="tab-pane fade" id="empaquetado">
-                <h2 class="text-center mb-4">
-                    <i class="fas fa-box me-3"></i>
-                    <span id="empaquetadoTitle">Empaquetado y Conservación</span>
-                </h2>
-                
-                <div id="empaquetadoContent">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="method-card">
-                                <h4><i class="fas fa-bottle-droplet me-2"></i>Contenedores</h4>
-                                <div class="image-placeholder mb-3">
-                                    <i class="fas fa-bottle-droplet fa-3x"></i>
-                                    <div class="ms-3">Botella de vidrio ámbar</div>
-                                </div>
-                                <ul>
-                                    <li><strong>Vidrio ámbar:</strong> Protección UV</li>
-                                    <li><strong>PET:</strong> Ligero, resistente</li>
-                                    <li><strong>LDPE:</strong> Flexible, fácil dosificación</li>
-                                </ul>
-                                <div class="warning-box">
-                                    <small><i class="fas fa-exclamation-triangle me-2"></i>Evitar contenedores de policarbonato debido a migración de BPA</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="method-card">
-                                <h4><i class="fas fa-tags me-2"></i>Etiquetado</h4>
-                                <div class="image-placeholder mb-3">
-                                    <i class="fas fa-tags fa-3x"></i>
-                                    <div class="ms-3">Etiqueta regulatoria</div>
-                                </div>
-                                <ul>
-                                    <li>Concentración de nicotina</li>
-                                    <li>Ratio PG/VG</li>
-                                    <li>Fecha de fabricación y caducidad</li>
-                                    <li>Advertencias sanitarias</li>
-                                    <li>Lista de ingredientes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="method-card">
-                        <h4><i class="fas fa-shield-alt me-2"></i>Condiciones de Almacenamiento</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="statistic-card">
-                                    <h5><i class="fas fa-thermometer-half text-primary"></i></h5>
-                                    <h6>Temperatura</h6>
-                                    <p>15-25°C</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="statistic-card">
-                                    <h5><i class="fas fa-tint text-info"></i></h5>
-                                    <h6>Humedad</h6>
-                                    <p>40-60% RH</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="statistic-card">
-                                    <h5><i class="fas fa-sun text-warning"></i></h5>
-                                    <h6>Luz</h6>
-                                    <p>Protegido de UV</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="method-card">
-                        <h4><i class="fas fa-exclamation-triangle me-2"></i>Degradación Química</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h6>Factores de degradación:</h6>
-                                <ul>
-                                    <li><strong>Luz UV:</strong> Oxidación de nicotina</li>
-                                    <li><strong>Calor:</strong> Descomposición de aromatizantes</li>
-                                    <li><strong>Oxígeno:</strong> Formación de aldehídos</li>
-                                    <li><strong>Tiempo:</strong> Hidrólisis de ésteres</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h6>Productos de degradación:</h6>
-                                <div class="molecular-structure">
-                                    <div class="chemical-formula">Nicotina → Cotinina + metabolitos</div>
-                                    <div class="chemical-formula">Aromatizantes → Aldehídos</div>
-                                    <div class="chemical-formula">PG/VG → Compuestos carbonílicos</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="warning-box">
-                            <strong>Vida útil típica:</strong> 1-2 años en condiciones óptimas
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-center mb-4"><i class="fas fa-box me-3"></i><span id="empaquetadoTitle">Empaquetado y
+                        Conservación</span></h2>
+                <div id="empaquetadoContent"></div>
             </div>
-
             <div class="tab-pane fade" id="inhalacion">
-                <h2 class="text-center mb-4">
-                    <i class="fas fa-lungs me-3"></i>
-                    <span id="inhalacionTitle">Proceso de Inhalación</span>
-                </h2>
-                
-                <div id="inhalacionContent">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="method-card">
-                                <h4><i class="fas fa-fire me-2"></i>Vaporización</h4>
-                                <div class="image-placeholder mb-3">
-                                    <i class="fas fa-fire fa-3x"></i>
-                                    <div class="ms-3">Resistencia calentando e-líquido</div>
-                                </div>
-                                <p>El proceso de vaporización ocurre cuando:</p>
-                                <ul>
-                                    <li><strong>Temperatura:</strong> 200-300°C en la resistencia</li>
-                                    <li><strong>Potencia:</strong> 5-200W dependiendo del dispositivo</li>
-                                    <li><strong>Tiempo:</strong> 1-3 segundos de calentamiento</li>
-                                </ul>
-                                <div class="molecular-structure">
-                                    <h6>Cambio de fase:</h6>
-                                    <div class="chemical-formula">Líquido → Vapor + Aerosol</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="method-card">
-                                <h4><i class="fas fa-wind me-2"></i>Tipos de Inhalación</h4>
-                                <div class="row">
-                                    <div class="col-12 mb-3">
-                                        <div class="molecular-structure">
-                                            <strong>MTL (Mouth to Lung)</strong>
-                                            <p>Boca → Pulmones</p>
-                                            <small>Similar al cigarrillo tradicional</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="molecular-structure">
-                                            <strong>DTL (Direct to Lung)</strong>
-                                            <p>Directo a pulmones</p>
-                                            <small>Inhalación profunda</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="method-card">
-                        <h4><i class="fas fa-microscope me-2"></i>Composición del Aerosol</h4>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="statistic-card">
-                                    <h5 class="text-primary">92-95%</h5>
-                                    <p>Agua</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="statistic-card">
-                                    <h5 class="text-info">3-5%</h5>
-                                    <p>PG/VG</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="statistic-card">
-                                    <h5 class="text-warning">1-2%</h5>
-                                    <p>Nicotina</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="statistic-card">
-                                    <h5 class="text-secondary">&lt;1%</h5>
-                                    <p>Aromatizantes</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="method-card">
-                        <h4><i class="fas fa-lungs me-2"></i>Absorción Pulmonar</h4>
-                        <div class="process-container">
-                            <div class="process-step">
-                                <h6>Deposición Alveolar</h6>
-                                <p>Las partículas de 0.1-1μm se depositan en los alveolos pulmonares</p>
-                            </div>
-                            <div class="process-step">
-                                <h6>Absorción Sistémica</h6>
-                                <p>La nicotina cruza la barrera alveolocapilar en 10-20 segundos</p>
-                            </div>
-                            <div class="process-step">
-                                <h6>Distribución Cerebral</h6>
-                                <p>Llegada al cerebro en 6-8 segundos tras la inhalación</p>
-                            </div>
-                        </div>
-                        
-                        <div class="warning-box">
-                            <h6><i class="fas fa-exclamation-triangle me-2"></i>Factores que Afectan la Absorción</h6>
-                            <ul class="mb-0">
-                                <li>pH del aerosol (sales vs freebase)</li>
-                                <li>Tamaño de partícula</li>
-                                <li>Tiempo de retención pulmonar</li>
-                                <li>Flujo de inhalación</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-center mb-4"><i class="fas fa-lungs me-3"></i><span id="inhalacionTitle">Proceso de
+                        Inhalación</span></h2>
+                <div id="inhalacionContent"></div>
             </div>
-
             <div class="tab-pane fade" id="efectos">
-                <h2 class="text-center mb-4">
-                    <i class="fas fa-heartbeat me-3"></i>
-                    <span id="efectosTitle">Efectos en el Cuerpo</span>
-                </h2>
-                
-                <div id="efectosContent">
-                    <div class="health-impact">
-                        <h4><i class="fas fa-lungs me-2 text-danger"></i>Sistema Respiratorio</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="organ-effect">
-                                    <i class="fas fa-lungs fa-2x text-danger me-3"></i>
-                                    <div>
-                                        <h6>Pulmones</h6>
-                                        <ul class="mb-0">
-                                            <li>Irritación de vías aéreas</li>
-                                            <li>Inflamación bronquial</li>
-                                            <li>Reducción de función ciliar</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="organ-effect">
-                                    <i class="fas fa-wind fa-2x text-warning me-3"></i>
-                                    <div>
-                                        <h6>Bronquios</h6>
-                                        <ul class="mb-0">
-                                            <li>Broncoconstricción</li>
-                                            <li>Incremento de moco</li>
-                                            <li>Hiperreactividad</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="warning-box">
-                            <h6>Compuestos Tóxicos Identificados:</h6>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="risk-level-high p-2 rounded">
-                                        <strong>Formaldehído</strong><br>
-                                        <small>Carcinógeno confirmado</small>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="risk-level-medium p-2 rounded">
-                                        <strong>Acroleína</strong><br>
-                                        <small>Irritante severo</small>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="risk-level-high p-2 rounded">
-                                        <strong>Diacetilo</strong><br>
-                                        <small>Causa bronquiolitis obliterante</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="health-impact">
-                        <h4><i class="fas fa-heart me-2 text-danger"></i>Sistema Cardiovascular</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="organ-effect">
-                                    <i class="fas fa-heart fa-2x text-danger me-3"></i>
-                                    <div>
-                                        <h6>Corazón</h6>
-                                        <ul class="mb-0">
-                                            <li>Aumento de frecuencia cardíaca</li>
-                                            <li>Incremento de presión arterial</li>
-                                            <li>Arritmias potenciales</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="organ-effect">
-                                    <i class="fas fa-project-diagram fa-2x text-warning me-3"></i>
-                                    <div>
-                                        <h6>Vasos Sanguíneos</h6>
-                                        <ul class="mb-0">
-                                            <li>Vasoconstricción</li>
-                                            <li>Disfunción endotelial</li>
-                                            <li>Aumento de agregación plaquetaria</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="molecular-structure">
-                            <h6>Mecanismo de Acción de la Nicotina:</h6>
-                            <div class="chemical-formula">Nicotina + Receptores nAChR → Liberación de catecolaminas</div>
-                        </div>
-                    </div>
-                    
-                    <div class="health-impact">
-                        <h4><i class="fas fa-brain me-2 text-info"></i>Sistema Nervioso</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="organ-effect">
-                                    <i class="fas fa-brain fa-2x text-info me-3"></i>
-                                    <div>
-                                        <h6>Cerebro</h6>
-                                        <ul class="mb-0">
-                                            <li>Activación del sistema dopaminérgico</li>
-                                            <li>Desarrollo de dependencia</li>
-                                            <li>Alteración de neurotransmisores</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="statistic-card">
-                                    <h5>Tiempo de acción</h5>
-                                    <h3 class="text-primary">6-8 seg</h3>
-                                    <p>De inhalación a cerebro</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="comparison-table mt-4">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Sistema</th>
-                                    <th>Efecto Agudo</th>
-                                    <th>Efecto Crónico</th>
-                                    <th>Nivel de Riesgo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Respiratorio</strong></td>
-                                    <td>Irritación, tos</td>
-                                    <td>Inflamación crónica</td>
-                                    <td><span class="badge bg-warning">Medio-Alto</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Cardiovascular</strong></td>
-                                    <td>↑FC, ↑PA</td>
-                                    <td>Ateroesclerosis</td>
-                                    <td><span class="badge bg-danger">Alto</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Nervioso</strong></td>
-                                    <td>Estimulación</td>
-                                    <td>Dependencia</td>
-                                    <td><span class="badge bg-danger">Alto</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Reproductivo</strong></td>
-                                    <td>Vasoconstricción</td>
-                                    <td>Fertilidad reducida</td>
-                                    <td><span class="badge bg-warning">Medio</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <h2 class="text-center mb-4"><i class="fas fa-heartbeat me-3"></i><span id="efectosTitle">Efectos en el
+                        Cuerpo</span></h2>
+                <div id="efectosContent"></div>
             </div>
         </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        class PresentationManager {
-            constructor() {
-                this.currentMode = 'vaper';
-                this.initializeEventListeners();
-                this.createFloatingParticles();
-                this.animateElements();
-            }
-            
-            initializeEventListeners() {
-                const modeToggle = document.getElementById('modeToggle');
-                modeToggle.addEventListener('click', () => this.toggleMode());
-                
-                // Animate tabs on click
-                document.querySelectorAll('.nav-link').forEach(tab => {
-                    tab.addEventListener('click', () => this.animateTabContent());
-                });
-            }
-            
-            toggleMode() {
-                const body = document.body;
-                const modeText = document.getElementById('modeText');
-                
-                if (this.currentMode === 'vaper') {
-                    this.switchToTussyMode();
-                    modeText.textContent = 'Cambiar a Vaper';
-                } else {
-                    this.switchToVaperMode();
-                    modeText.textContent = 'Cambiar a Tussy';
-                }
-                
-                this.animateTransition();
-            }
-            
-            switchToVaperMode() {
-                const body = document.body;
-                body.className = 'vaper-mode';
-                this.currentMode = 'vaper';
-                
-                // Update content
-                document.getElementById('heroTitle').textContent = 'VAPER: Análisis Químico y Salud';
-                document.getElementById('heroSubtitle').textContent = 'Estudio profundo de los componentes químicos, métodos de preparación, empaquetado, inhalación y efectos corporales del vapeo electrónico';
-                
-                // Update statistics
-                document.getElementById('stat1Number').textContent = '95%';
-                document.getElementById('stat1Text').textContent = 'Menos tóxico que cigarrillos';
-                document.getElementById('stat2Number').textContent = '4000+';
-                document.getElementById('stat2Text').textContent = 'Compuestos químicos diferentes';
-                document.getElementById('stat3Number').textContent = '68';
-                document.getElementById('stat3Text').textContent = 'Países con regulaciones';
-                
-                // Update tab titles
-                document.getElementById('componentesTitle').textContent = 'Componentes Químicos del Vaper';
-                document.getElementById('preparacionTitle').textContent = 'Métodos de Preparación';
-                document.getElementById('empaquetadoTitle').textContent = 'Empaquetado y Conservación';
-                document.getElementById('inhalacionTitle').textContent = 'Proceso de Inhalación';
-                document.getElementById('efectosTitle').textContent = 'Efectos en el Cuerpo';
-                
-                this.updateVaperContent();
-            }
-            
-            switchToTussyMode() {
-                const body = document.body;
-                body.className = 'tussy-mode';
-                this.currentMode = 'tussy';
-                
-                // Update content
-                document.getElementById('heroTitle').textContent = 'TUSSY: Análisis Químico y Riesgos';
-                document.getElementById('heroSubtitle').textContent = 'Estudio científico de los componentes del jarabe para la tos, métodos de preparación ilegal, distribución, consumo y graves efectos en la salud';
-                
-                // Update statistics
-                document.getElementById('stat1Number').textContent = '300%';
-                document.getElementById('stat1Text').textContent = 'Aumento de casos en adolescentes';
-                document.getElementById('stat2Number').textContent = '25-30mg';
-                document.getElementById('stat2Text').textContent = 'Dosis recreativa de DXM';
-                document.getElementById('stat3Number').textContent = '45';
-                document.getElementById('stat3Text').textContent = 'Países afectados por la epidemia';
-                
-                // Update tab titles
-                document.getElementById('componentesTitle').textContent = 'Componentes Químicos del Tussy';
-                document.getElementById('preparacionTitle').textContent = 'Métodos de Preparación Ilegal';
-                document.getElementById('empaquetadoTitle').textContent = 'Distribución y Comercialización';
-                document.getElementById('inhalacionTitle').textContent = 'Proceso de Consumo';
-                document.getElementById('efectosTitle').textContent = 'Efectos Devastadores en el Cuerpo';
-                
-                this.updateTussyContent();
-            }
-            
-            updateVaperContent() {
-                // Reset to original vaper content structure
-                const componentesContent = document.getElementById('componentesContent');
-                componentesContent.innerHTML = `
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-tint me-2 text-primary"></i>Glicerina Vegetal (VG)</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₃H₈O₃</div>
-                                <p class="mb-0">Estructura molecular del glicerol</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Viscosidad: Alta</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Punto de ebullición: 290°C</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Función: Producción de vapor</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Descomposición: Genera acroleína >280°C</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-droplet me-2 text-info"></i>Propilenglicol (PG)</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₃H₈O₂</div>
-                                <p class="mb-0">1,2-propanodiol</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Viscosidad: Baja</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Punto de ebullición: 188°C</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Función: Transporte de sabor</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Irritación: Vías respiratorias</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-leaf me-2 text-success"></i>Nicotina</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₁₀H₁₄N₂</div>
-                                <p class="mb-0">Alcaloide natural</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Concentración: 0-50mg/ml</li>
-                                <li><i class="fas fa-check text-success me-2"></i>Absorción: Pulmonar rápida</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Dependencia: Alta</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Toxicidad: 0.5-1mg/kg</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-palette me-2 text-secondary"></i>Aromatizantes</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">Diversos compuestos</div>
-                                <p class="mb-0">Aldehídos, ésteres, cetonas</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Variedad: 8000+ sabores</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Diacetilo: Causa popcorn lung</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Benzaldehído: Irritante</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Cinamaldehído: Citotóxico</li>
-                            </ul>
-                        </div>
-                    </div>
-                `;
-            }
-            
-            updateTussyContent() {
-                const componentesContent = document.getElementById('componentesContent');
-                componentesContent.innerHTML = `
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-pills me-2 text-danger"></i>Dextrometorfano (DXM)</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₁₈H₂₅NO</div>
-                                <p class="mb-0">Morfina sintética dextrógira</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Dosis terapéutica: 15-30mg</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Dosis recreativa: 100-1500mg</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Antagonista NMDA</li>
-                                <li><i class="fas fa-skull text-danger me-2"></i>Potencial de sobredosis fatal</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-wine-bottle me-2 text-purple"></i>Prometazina</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₁₇H₂₀N₂S</div>
-                                <p class="mb-0">Antihistamínico fenotiazínico</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Antiemético</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Potencia efectos del DXM</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Sedación extrema</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Depresión respiratoria</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-tint me-2 text-info"></i>Codeína</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">C₁₈H₂₁NO₃</div>
-                                <p class="mb-0">Opioide natural</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-success me-2"></i>Analgésico suave</li>
-                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Metabolizada a morfina</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Altamente adictiva</li>
-                                <li><i class="fas fa-skull text-danger me-2"></i>Síndrome de abstinencia severo</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6">
-                        <div class="component-card">
-                            <h4><i class="fas fa-flask me-2 text-secondary"></i>Aditivos Peligrosos</h4>
-                            <div class="molecular-structure">
-                                <div class="chemical-formula">Colorantes + Conservantes</div>
-                                <p class="mb-0">Múltiples compuestos sintéticos</p>
-                            </div>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-times text-danger me-2"></i>Benzoato de sodio: Hepatotóxico</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Colorantes azo: Carcinógenos</li>
-                                <li><i class="fas fa-times text-danger me-2"></i>Edulcorantes: Neurotóxicos</li>
-                                <li><i class="fas fa-skull text-danger me-2"></i>Interacciones medicamentosas fatales</li>
-                            </ul>
-                        </div>
-                    </div>
-                `;
-                
-                // Update preparation content for tussy
-                const preparacionContent = document.getElementById('preparacionContent');
-                preparacionContent.innerHTML = `
-                    <div class="process-container">
-                        <div class="process-step">
-                            <div class="method-card" style="border-left-color: #e74c3c;">
-                                <h4><i class="fas fa-skull text-danger me-2"></i>Obtención de Ingredientes</h4>
-                                <div class="warning-box">
-                                    <strong>ADVERTENCIA:</strong> Proceso ilegal y extremadamente peligroso
-                                </div>
-                                <p>Los ingredientes se obtienen de múltiples fuentes:</p>
-                                <ul>
-                                    <li><strong>Jarabes OTC:</strong> Compra masiva en farmacias</li>
-                                    <li><strong>Prescripciones falsas:</strong> Documentos médicos fraudulentos</li>
-                                    <li><strong>Mercado negro:</strong> Distribuidores ilegales</li>
-                                    <li><strong>Laboratorios clandestinos:</strong> Síntesis casera</li>
-                                </ul>
-                                <div class="image-placeholder">
-                                    <i class="fas fa-ban fa-3x text-danger"></i>
-                                    <div class="ms-3">Actividad ilegal - No mostrable</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="process-step">
-                            <div class="method-card" style="border-left-color: #e74c3c;">
-                                <h4><i class="fas fa-flask text-danger me-2"></i>Concentración Química</h4>
-                                <p>Proceso de concentración extremadamente peligroso:</p>
-                                <ul>
-                                    <li><strong>Evaporación:</strong> Eliminación de agua a altas temperaturas</li>
-                                    <li><strong>Filtración:</strong> Separación de compuestos activos</li>
-                                    <li><strong>Cristalización:</strong> Obtención de DXM puro</li>
-                                    <li><strong>Mezcla:</strong> Combinación con otros depresores</li>
-                                </ul>
-                                <div class="molecular-structure">
-                                    <div class="chemical-formula text-danger">⚠️ RIESGO: Explosión, intoxicación, quemaduras químicas</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="process-step">
-                            <div class="method-card" style="border-left-color: #e74c3c;">
-                                <h4><i class="fas fa-cocktail text-danger me-2"></i>Mezcla Final ("Lean")</h4>
-                                <p>Combinación letal de ingredientes:</p>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <ul>
-                                            <li>Jarabe de codeína concentrado</li>
-                                            <li>Bebidas carbonatadas (Sprite, 7UP)</li>
-                                            <li>Caramelos duros (Jolly Ranchers)</li>
-                                            <li>Hielo</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="health-impact">
-                                            <h6>Concentraciones letales:</h6>
-                                            <ul>
-                                                <li>Codeína: 60-240mg</li>
-                                                <li>Prometazina: 25-100mg</li>
-                                                <li>Alcohol: Variable</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                // Update other tabs for tussy mode with similar dangerous content
-                const empaquetadoContent = document.getElementById('empaquetadoContent');
-                empaquetadoContent.innerHTML = `
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="method-card" style="border-left-color: #e74c3c;">
-                                <h4><i class="fas fa-eye-slash me-2 text-danger"></i>Distribución Clandestina</h4>
-                                <div class="image-placeholder mb-3">
-                                    <i class="fas fa-user-secret fa-3x text-danger"></i>
-                                    <div class="ms-3">Redes de distribución ilegal</div>
-                                </div>
-                                <ul>
-                                    <li><strong>Redes sociales:</strong> Instagram, TikTok, Snapchat</li>
-                                    <li><strong>Mensajería:</strong> Telegram, WhatsApp</li>
-                                    <li><strong>Darknet:</strong> Mercados ocultos</li>
-                                    <li><strong>Dealers locales:</strong> Distribución urbana</li>
-                                </ul>
-                                <div class="warning-box">
-                                    <small><i class="fas fa-exclamation-triangle me-2"></i>Actividad monitoreada por autoridades - Penas de hasta 20 años</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="method-card" style="border-left-color: #f39c12;">
-                                <h4><i class="fas fa-money-bill me-2 text-warning"></i>Marketing Predatorio</h4>
-                                <div class="image-placeholder mb-3">
-                                    <i class="fas fa-bullseye fa-3x text-warning"></i>
-                                    <div class="ms-3">Targeting de menores</div>
-                                </div>
-                                <ul>
-                                    <li>Influencers en redes sociales</li>
-                                    <li>Música rap y trap</li>
-                                    <li>Memes y cultura pop</li>
-                                    <li>Glamorización del consumo</li>
-                                    <li>Ocultación de riesgos reales</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="method-card" style="border-left-color: #e74c3c;">
-                        <h4><i class="fas fa-coins me-2 text-danger"></i>Economía del Tussy</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="statistic-card">
-                                    <h5><i class="fas fa-dollar-sign text-success"></i></h5>
-                                    <h6>Costo Producción</h6>
-                                    <p>$5-15 USD</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="statistic-card">
-                                    <h5><i class="fas fa-chart-line text-warning"></i></h5>
-                                    <h6>Precio Venta</h6>
-                                    <p>$200-400 USD/litro</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="statistic-card">
-                                    <h5><i class="fas fa-percentage text-danger"></i></h5>
-                                    <h6>Margen Ganancia</h6>
-                                    <p>2000-3000%</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="health-impact">
-                            <h6><i class="fas fa-skull text-danger me-2"></i>Impacto Social Devastador:</h6>
-                            <ul>
-                                <li>Adicción en adolescentes (12-18 años)</li>
-                                <li>Deserción escolar masiva</li>
-                                <li>Criminalidad juvenil</li>
-                                <li>Destrucción de familias</li>
-                                <li>Colapso de sistemas de salud</li>
-                            </ul>
-                        </div>
-                    </div>
-                `;
-                
-                const inhalacionContent = document.getElementById('inhalacionContent');
-                inhalacionContent.innerHTML = `
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="method-card" style="border-left-color: #e74c3c;">
-                                <h4><i class="fas fa-glass-martini me-2 text-danger"></i>Método de Consumo</h4>
-                                <div class="image-placeholder mb-3">
-                                    <i class="fas fa-glass-martini fa-3x text-danger"></i>
-                                    <div class="ms-3">Copa o vaso especial</div>
-                                </div>
-                                <p>El "lean" o "purple drank" se consume típicamente:</p>
-                                <ul>
-                                    <li><strong>Vaso de poliestireno:</strong> Distintivo del consumo</li>
-                                    <li><strong>Consumo lento:</strong> "Sipping" durante horas</li>
-                                    <li><strong>Ritual social:</strong> Consumo grupal</li>
-                                    <li><strong>Dosis progresiva:</strong> Tolerancia rápida</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <div class="method-card" style="border-left-color: #8e44ad;">
-                                <h4><i class="fas fa-brain me-2 text-purple"></i>Fases de Intoxicación</h4>
-                                <div class="process-container">
-                                    <div class="process-step" style="padding-left: 2rem;">
-                                        <div class="molecular-structure">
-                                            <strong>Fase 1 (15-30 min)</strong>
-                                            <p>Euforia, relajación</p>
-                                        </div>
-                                    </div>
-                                    <div class="process-step" style="padding-left: 2rem;">
-                                        <div class="molecular-structure">
-                                            <strong>Fase 2 (30-60 min)</strong>
-                                            <p>Sedación profunda, confusión</p>
-                                        </div>
-                                    </div>
-                                    <div class="process-step" style="padding-left: 2rem;">
-                                        <div class="molecular-structure">
-                                            <strong>Fase 3 (1-4 horas)</strong>
-                                            <p>Estupor, pérdida de conciencia</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="method-card" style="border-left-color: #e74c3c;">
-                        <h4><i class="fas fa-exclamation-triangle me-2 text-danger"></i>Absorción y Metabolismo Letal</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h6>Farmacocinética:</h6>
-                                <ul>
-                                    <li><strong>Absorción GI:</strong> 30-60 minutos</li>
-                                    <li><strong>Pico plasmático:</strong> 1-2 horas</li>
-                                    <li><strong>Vida media:</strong> 2-4 horas (codeína)</li>
-                                    <li><strong>Metabolismo:</strong> CYP2D6 → morfina</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h6>Interacciones letales:</h6>
-                                <div class="molecular-structure">
-                                    <div class="chemical-formula text-danger">Codeína + Alcohol = Depresión respiratoria fatal</div>
-                                    <div class="chemical-formula text-danger">DXM + ISRS = Síndrome serotoninérgico</div>
-                                    <div class="chemical-formula text-danger">Prometazina + Benzos = Coma</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="health-impact">
-                            <h6><i class="fas fa-skull text-danger me-2"></i>Signos de Sobredosis Inminente:</h6>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="risk-level-high p-2 rounded">
-                                        <strong>Respiración</strong><br>
-                                        <small>&lt;12 rpm, irregular</small>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="risk-level-high p-2 rounded">
-                                        <strong>Consciencia</strong><br>
-                                        <small>Estupor, no responde</small>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="risk-level-high p-2 rounded">
-                                        <strong>Piel</strong><br>
-                                        <small>Azul, fría, húmeda</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                
-                const efectosContent = document.getElementById('efectosContent');
-                efectosContent.innerHTML = `
-                    <div class="health-impact">
-                        <h4><i class="fas fa-skull me-2 text-danger"></i>Efectos Devastadores Inmediatos</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="organ-effect" style="border-left: 5px solid #e74c3c;">
-                                    <i class="fas fa-lungs fa-2x text-danger me-3"></i>
-                                    <div>
-                                        <h6>Depresión Respiratoria</h6>
-                                        <ul class="mb-0">
-                                            <li>Frecuencia &lt;8 rpm</li>
-                                            <li>Hipoxia cerebral</li>
-                                            <li>Paro respiratorio</li>
-                                            <li>Muerte en minutos</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="organ-effect" style="border-left: 5px solid #e74c3c;">
-                                    <i class="fas fa-heart fa-2x text-danger me-3"></i>
-                                    <div>
-                                        <h6>Colapso Cardiovascular</h6>
-                                        <ul class="mb-0">
-                                            <li>Bradicardia severa</li>
-                                            <li>Hipotensión extrema</li>
-                                            <li>Arritmias letales</li>
-                                            <li>Paro cardíaco</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="health-impact">
-                        <h4><i class="fas fa-brain me-2 text-danger"></i>Daño Neurológico Permanente</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="organ-effect" style="border-left: 5px solid #8e44ad;">
-                                    <i class="fas fa-brain fa-2x text-purple me-3"></i>
-                                    <div>
-                                        <h6>Sistema Nervioso Central</h6>
-                                        <ul class="mb-0">
-                                            <li>Daño irreversible de neuronas</li>
-                                            <li>Pérdida de memoria</li>
-                                            <li>Deterioro cognitivo severo</li>
-                                            <li>Psicosis permanente</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="statistic-card" style="border-top-color: #e74c3c;">
-                                    <h5>Tasa de Mortalidad</h5>
-                                    <h3 class="text-danger">67%</h3>
-                                    <p>En sobredosis sin tratamiento</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="health-impact">
-                        <h4><i class="fas fa-liver me-2 text-warning"></i>Destrucción Orgánica Múltiple</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="organ-effect" style="border-left: 5px solid #f39c12;">
-                                    <i class="fas fa-liver fa-2x text-warning me-3"></i>
-                                    <div>
-                                        <h6>Hígado</h6>
-                                        <ul class="mb-0">
-                                            <li>Hepatitis tóxica</li>
-                                            <li>Necrosis hepatocelular</li>
-                                            <li>Cirrosis precoz</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="organ-effect" style="border-left: 5px solid #e74c3c;">
-                                    <i class="fas fa-kidneys fa-2x text-danger me-3"></i>
-                                    <div>
-                                        <h6>Riñones</h6>
-                                        <ul class="mb-0">
-                                            <li>Nefritis intersticial</li>
-                                            <li>Insuficiencia renal</li>
-                                            <li>Necesidad de diálisis</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="organ-effect" style="border-left: 5px solid #8e44ad;">
-                                    <i class="fas fa-stomach fa-2x text-purple me-3"></i>
-                                    <div>
-                                        <h6>Sistema GI</h6>
-                                        <ul class="mb-0">
-                                            <li>Úlceras sangrantes</li>
-                                            <li>Perforación intestinal</li>
-                                            <li>Sepsis abdominal</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="comparison-table mt-4">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Órgano/Sistema</th>
-                                    <th>Efecto Agudo</th>
-                                    <th>Daño Permanente</th>
-                                    <th>Mortalidad</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-danger">
-                                    <td><strong>Respiratorio</strong></td>
-                                    <td>Paro respiratorio</td>
-                                    <td>Fibrosis pulmonar</td>
-                                    <td><span class="badge bg-danger">Muy Alta</span></td>
-                                </tr>
-                                <tr class="table-danger">
-                                    <td><strong>Cardiovascular</strong></td>
-                                    <td>Paro cardíaco</td>
-                                    <td>Cardiomiopatía</td>
-                                    <td><span class="badge bg-danger">Muy Alta</span></td>
-                                </tr>
-                                <tr class="table-warning">
-                                    <td><strong>Nervioso</strong></td>
-                                    <td>Coma profundo</td>
-                                    <td>Daño cerebral</td>
-                                    <td><span class="badge bg-danger">Alta</span></td>
-                                </tr>
-                                <tr class="table-warning">
-                                    <td><strong>Hepático</strong></td>
-                                    <td>Hepatitis fulminante</td>
-                                    <td>Cirrosis</td>
-                                    <td><span class="badge bg-warning">Media-Alta</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="health-impact mt-4">
-                        <h4><i class="fas fa-users me-2 text-danger"></i>Impacto Social y Familiar</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h6>Estadísticas Alarmantes:</h6>
-                                <ul>
-                                    <li><strong>Edad promedio de inicio:</strong> 14 años</li>
-                                    <li><strong>Adicción desarrollada:</strong> En 2-4 semanas</li>
-                                    <li><strong>Costo tratamiento:</strong> $50,000-100,000 USD</li>
-                                    <li><strong>Tasa de recaída:</strong> 89% sin tratamiento especializado</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h6>Consecuencias Familiares:</h6>
-                                <ul>
-                                    <li>Destrucción del núcleo familiar</li>
-                                    <li>Ruina económica por tratamientos</li>
-                                    <li>Trauma psicológico en hermanos</li>
-                                    <li>Divorcio de padres (78% casos)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="warning-box mt-3">
-                            <h5><i class="fas fa-phone text-danger me-2"></i>Líneas de Ayuda de Emergencia</h5>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <strong>Sobredosis:</strong><br>
-                                    <span class="chemical-formula">911 (EE.UU.)</span><br>
-                                    <span class="chemical-formula">123 (Colombia)</span>
-                                </div>
-                                <div class="col-md-4">
-                                    <strong>Adicciones:</strong><br>
-                                    <span class="chemical-formula">1-800-662-HELP</span><br>
-                                    <span class="chemical-formula">018000-112439</span>
-                                </div>
-                                <div class="col-md-4">
-                                    <strong>Crisis:</strong><br>
-                                    <span class="chemical-formula">988 (Lifeline)</span><br>
-                                    <span class="chemical-formula">106 (Colombia)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
-            
-            animateTransition() {
-                const elements = document.querySelectorAll('.fade-in, .component-card, .method-card, .statistic-card');
-                elements.forEach((el, index) => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(20px)';
-                    
-                    setTimeout(() => {
-                        el.style.transition = 'all 0.6s ease';
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    }, index * 100);
-                });
-            }
-            
-            animateTabContent() {
-                const activeTab = document.querySelector('.tab-pane.active');
-                if (activeTab) {
-                    const cards = activeTab.querySelectorAll('.component-card, .method-card, .effect-card');
-                    cards.forEach((card, index) => {
-                        card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s both`;
-                    });
-                }
-            }
-            
-            createFloatingParticles() {
-                const particlesContainer = document.querySelector('.floating-particles');
-                
-                const createParticle = () => {
-                    const particle = document.createElement('div');
-                    particle.className = 'particle';
-                    particle.style.left = Math.random() * 100 + '%';
-                    particle.style.width = particle.style.height = Math.random() * 10 + 5 + 'px';
-                    particle.style.animationDelay = Math.random() * 6 + 's';
-                    particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
-                    particlesContainer.appendChild(particle);
-                    
-                    setTimeout(() => {
-                        particle.remove();
-                    }, 6000);
-                };
-                
-                // Create particles periodically
-                setInterval(createParticle, 300);
-                
-                // Create initial batch
-                for (let i = 0; i < 10; i++) {
-                    setTimeout(createParticle, i * 100);
-                }
-            }
-            
-            animateElements() {
-                // Animate elements on scroll
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('fade-in');
-                        }
-                    });
-                });
-                
-                document.querySelectorAll('.component-card, .method-card, .statistic-card').forEach(el => {
-                    observer.observe(el);
-                });
-            }
-        }
-        
-        // Initialize the presentation when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            new PresentationManager();
-        });
-        
-        // Add some interactive effects
-        document.addEventListener('mouseover', (e) => {
-            if (e.target.closest('.component-card, .method-card, .statistic-card')) {
-                const card = e.target.closest('.component-card, .method-card, .statistic-card');
-                card.style.transform = 'translateY(-8px) scale(1.02)';
-                card.style.boxShadow = '0 15px 35px rgba(0,0,0,0.2)';
-            }
-        });
-        
-        document.addEventListener('mouseout', (e) => {
-            if (e.target.closest('.component-card, .method-card, .statistic-card')) {
-                const card = e.target.closest('.component-card, .method-card, .statistic-card');
-                card.style.transform = 'translateY(-5px) scale(1)';
-                card.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
-            }
-        });
-        
-        // Add keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            const tabs = document.querySelectorAll('.nav-link');
-            const activeTab = document.querySelector('.nav-link.active');
-            const activeIndex = Array.from(tabs).indexOf(activeTab);
-            
-            if (e.key === 'ArrowRight' && activeIndex < tabs.length - 1) {
-                tabs[activeIndex + 1].click();
-            } else if (e.key === 'ArrowLeft' && activeIndex > 0) {
-                tabs[activeIndex - 1].click();
-            } else if (e.key === ' ') {
-                e.preventDefault();
-                document.getElementById('modeToggle').click();
-            }
-        });
-    </script>
+    <script>let currentMode = 'vaper'; const modeToggle = document.getElementById('modeToggle'); const modeText = document.getElementById('modeText'); const content = { vaper: { componentes: `\<div class="row"\>\<div class="col-md-6"\>\<div class="component-card"\>\<h4\>\<i class="fas fa-tint me-2 text-primary"\>\</i\>Glicerina Vegetal (VG)\</h4\>\<div class="molecular-structure"\>\<div class="chemical-formula"\>C₃H₈O₃\</div\>\<p class="mb-0"\>Estructura molecular del glicerol\</p\>\</div\>\<ul class="list-unstyled"\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Viscosidad: Alta\</li\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Punto de ebullición: 290°C\</li\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Función: Producción de vapor y suavidad\</li\>\<li\>\<i class="fas fa-exclamation-triangle text-warning me-2"\>\</i\>Descomposición: Genera Acroleína (tóxica) a \>280°C\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="component-card"\>\<h4\>\<i class="fas fa-droplet me-2 text-info"\>\</i\>Propilenglicol (PG)\</h4\>\<div class="molecular-structure"\>\<div class="chemical-formula"\>C₃H₈O₂\</div\>\<p class="mb-0"\>1,2-propanodiol\</p\>\</div\>\<ul class="list-unstyled"\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Viscosidad: Baja\</li\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Punto de ebullición: 188°C\</li\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Función: Transporte de sabor\</li\>\<li\>\<i class="fas fa-exclamation-triangle text-warning me-2"\>\</i\>Irritación: Vías respiratorias y sequedad bucal\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="component-card"\>\<h4\>\<i class="fas fa-leaf me-2 text-success"\>\</i\>Nicotina\</h4\>\<div class="molecular-structure"\>\<div class="chemical-formula"\>C₁₀H₁₄N₂\</div\>\<p class="mb-0"\>Alcaloide natural\</p\>\</div\>\<ul class="list-unstyled"\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Concentración: 0-50mg/ml\</li\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Absorción: Pulmonar rápida (sales)\</li\>\<li\>\<i class="fas fa-exclamation-triangle text-warning me-2"\>\</i\>Dependencia: Alta\</li\>\<li\>\<i class="fas fa-times text-danger me-2"\>\</i\>Toxicidad: 0.5-1mg/kg (dosis letal)\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="component-card"\>\<h4\>\<i class="fas fa-palette me-2 text-secondary"\>\</i\>Aromatizantes\</h4\>\<div class="molecular-structure"\>\<div class="chemical-formula"\>Diversos\</div\>\<p class="mb-0"\>Aldehídos, ésteres, cetonas\</p\>\</div\>\<ul class="list-unstyled"\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Variedad: 8000+ sabores\</li\>\<li\>\<i class="fas fa-exclamation-triangle text-warning me-2"\>\</i\>Diacetilo: Riesgo de Popcorn Lung\</li\>\<li\>\<i class="fas fa-times text-danger me-2"\>\</i\>Benzaldehído: Irritante severo\</li\>\<li\>\<i class="fas fa-times text-danger me-2"\>\</i\>Cinamaldehído: Citotóxico\</li\>\</ul\>\</div\>\</div\>\</div\>\<div class="warning-box mt-4"\>\<h5\>\<i class="fas fa-exclamation-triangle text-warning me-2"\>\</i\>Productos de Descomposición Térmica\</h5\>\<div class="row"\>\<div class="col-md-4"\>\<div class="molecular-structure"\>\<strong\>Formaldehído\</strong\>\<div class="chemical-formula"\>HCHO\</div\>\<small\>Carcinógeno Grupo 1\</small\>\</div\>\</div\>\<div class="col-md-4"\>\<div class="molecular-structure"\>\<strong\>Acetaldehído\</strong\>\<div class="chemical-formula"\>CH₃CHO\</div\>\<small\>Posible carcinógeno\</small\>\</div\>\</div\>\<div class="col-md-4"\>\<div class="molecular-structure"\>\<strong\>Acroleína\</strong\>\<div class="chemical-formula"\>C₃H₄O\</div\>\<small\>Irritante severo\</small\>\</div\>\</div\>\</div\>\</div\>`, preparacion: `\<div class="process-container"\>\<div class="process-step"\>\<div class="method-card"\>\<h4\>Mezclado de Base\</h4\>\<p\>Base de PG y VG. Ratios: 50/50 (sabor/vapor), 70/30 VG/PG (más vapor), 30/70 VG/PG (más sabor).\</p\>\<div class="image-placeholder"\>\<i class="fas fa-flask fa-3x"\>\</i\>\<div class="ms-3"\>Proceso de mezclado PG/VG\</div\>\</div\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card"\>\<h4\>Adición de Nicotina\</h4\>\<p\>Forma freebase (alcalina) o sales de nicotina (combinada con ácido orgánico para menor irritación).\</p\>\<div class="molecular-structure"\>\<h6\>Transformación química:\</h6\>\<div class="chemical-formula"\>C₁₀H₁₄N₂ + ácido → sal de nicotina\</div\>\</div\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card"\>\<h4\>Incorporación de Aromatizantes\</h4\>\<p\>Concentrados de sabor añadidos al 5-20%. Incluye ésteres, aldehídos, terpenos, vainillina y mentol.\</p\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card"\>\<h4\>Proceso de Maduración\</h4\>\<p\>Reposar para homogenización molecular y desarrollo de sabor. Tiempos: Frutales (1-2 semanas), Cremosos (4-6 semanas), Tabaco (6-8 semanas).\</p\>\<div class="image-placeholder"\>\<i class="fas fa-clock fa-3x"\>\</i\>\<div class="ms-3"\>Tiempo de maduración\</div\>\</div\>\</div\>\</div\>\</div\>`, empaquetado: `\<div class="row"\>\<div class="col-md-6"\>\<div class="method-card"\>\<h4\>\<i class="fas fa-bottle-droplet me-2"\>\</i\>Contenedores\</h4\>\<div class="image-placeholder mb-3"\>\<i class="fas fa-bottle-droplet fa-3x"\>\</i\>\<div class="ms-3"\>Botella de vidrio ámbar\</div\>\</div\>\<ul\>\<li\>\<strong\>Vidrio ámbar:\</strong\> Protección UV.\</li\>\<li\>\<strong\>PET/LDPE:\</strong\> Ligero, dosificación fácil.\</li\>\</ul\>\<div class="warning-box"\>\<small\>\<i class="fas fa-exclamation-triangle me-2"\>\</i\>Evitar policarbonato por posible migración de BPA.\</small\>\</div\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="method-card"\>\<h4\>\<i class="fas fa-tags me-2"\>\</i\>Etiquetado\</h4\>\<div class="image-placeholder mb-3"\>\<i class="fas fa-tags fa-3x"\>\</i\>\<div class="ms-3"\>Etiqueta regulatoria\</div\>\</div\>\<ul\>\<li\>Concentración de nicotina\</li\>\<li\>Ratio PG/VG\</li\>\<li\>Advertencias sanitarias\</li\>\</ul\>\</div\>\</div\>\</div\>\<div class="method-card"\>\<h4\>\<i class="fas fa-shield-alt me-2"\>\</i\>Condiciones de Almacenamiento\</h4\>\<div class="row"\>\<div class="col-md-4"\>\<div class="statistic-card"\>\<h5\>\<i class="fas fa-thermometer-half text-primary"\>\</i\>\</h5\>\<h6\>Temperatura\</h6\>\<p\>15-25°C\</p\>\</div\>\</div\>\<div class="col-md-4"\>\<div class="statistic-card"\>\<h5\>\<i class="fas fa-tint text-info"\>\</i\>\</h5\>\<h6\>Humedad\</h6\>\<p\>40-60% RH\</p\>\</div\>\</div\>\<div class="col-md-4"\>\<div class="statistic-card"\>\<h5\>\<i class="fas fa-sun text-warning"\>\</i\>\</h5\>\<h6\>Luz\</h6\>\<p\>Protegido de UV\</p\>\</div\>\</div\>\</div\>\</div\>\<div class="method-card"\>\<h4\>\<i class="fas fa-exclamation-triangle me-2"\>\</i\>Degradación Química\</h4\>\<p\>Factores: Luz UV (oxidación nicotina), Calor (descomposición aromatizantes), Oxígeno (formación de aldehídos).\</p\>\<div class="molecular-structure"\>\<div class="chemical-formula"\>Nicotina + O₂ + UV → Cotinina + M...\</div\>\</div\>\</div\>`, inhalacion: `\<div class="process-container"\>\<div class="process-step"\>\<div class="method-card"\>\<h4\>Generación de Aerosol\</h4\>\<p\>La resistencia calienta el e-líquido entre 100°C y 300°C, transformándolo en aerosol (no vapor puro).\</p\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card"\>\<h4\>Tamaño de Partícula\</h4\>\<p\>Las partículas de aerosol son ultrafinas, entre 100 y 500 nm, lo que permite una penetración profunda en los pulmones (alvéolos).\</p\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card"\>\<h4\>Absorción Sistémica\</h4\>\<p\>La nicotina y otros compuestos pasan rápidamente al torrente sanguíneo a través del área alveolar. La nicotina en sales es absorbida más rápido.\</p\>\</div\>\</div\>\</div\>`, efectos: `\<div class="warning-box"\>\<h4\>\<i class="fas fa-exclamation-circle text-danger me-2"\>\</i\>Impacto Crítico\</h4\>\<p\>El vapeo no es inofensivo. El aerosol contiene partículas finas, metales pesados (níquel, plomo), compuestos orgánicos volátiles (COVs) y agentes cancerígenos.\</p\>\</div\>\<div class="row"\>\<div class="col-md-6"\>\<div class="effect-card"\>\<h4\>\<i class="fas fa-lungs text-danger me-2"\>\</i\>Sistema Respiratorio\</h4\>\<ul class="list-unstyled"\>\<li\>Inflamación pulmonar aguda\</li\>\<li\>Bronquiolitis obliterante (Popcorn Lung)\</li\>\<li\>Daño a células epiteliales\</li\>\<li\>Riesgo de EVALI (E-cigarette or Vaping product Use-Associated Lung Injury)\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="effect-card"\>\<h4\>\<i class="fas fa-heart text-danger me-2"\>\</i\>Sistema Cardiovascular\</h4\>\<ul class="list-unstyled"\>\<li\>Aumento de la frecuencia cardíaca\</li\>\<li\>Aumento de la presión arterial\</li\>\<li\>Disfunción endotelial\</li\>\<li\>Riesgo incrementado de ataque cardíaco y accidente cerebrovascular\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="effect-card"\>\<h4\>\<i class="fas fa-brain text-warning me-2"\>\</i\>Sistema Nervioso Central\</h4\>\<ul class="list-unstyled"\>\<li\>Adicción a la nicotina\</li\>\<li\>Alteración del desarrollo cerebral en adolescentes\</li\>\<li\>Problemas de concentración y memoria\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="effect-card"\>\<h4\>\<i class="fas fa-smile-beam text-warning me-2"\>\</i\>Otros Efectos\</h4\>\<ul class="list-unstyled"\>\<li\>Irritación ocular y de vías aéreas superiores (por PG)\</li\>\<li\>Boca seca\</li\>\<li\>Problemas dentales\</li\>\</ul\>\</div\>\</div\>\</div\>` }, tussy: { componentes: `\<div class="warning-box"\>\<h4\>\<i class="fas fa-flask text-danger me-2"\>\</i\>Composición Química de Tussy (2C-B)\</h4\>\<p\>El 2C-B, o "Tussy", es una feniletilamina sintética con propiedades psicodélicas y entactógenas. Su composición varía drásticamente debido a la fabricación ilegal y adulteración.\</p\>\</div\>\<div class="row"\>\<div class="col-md-6"\>\<div class="component-card risk-level-high"\>\<h4\>\<i class="fas fa-vial me-2 text-danger"\>\</i\>2C-B (4-bromo-2,5-dimetoxifeniletilamina)\</h4\>\<div class="molecular-structure"\>\<div class="chemical-formula"\>C₁₁H₁₆BrNO₂\</div\>\<p class="mb-0"\>Feniletilamina (PSICODÉLICO)\</p\>\</div\>\<ul class="list-unstyled"\>\<li\>\<i class="fas fa-check text-success me-2"\>\</i\>Dosis: 5-30 mg (oral), 4-10 mg (esnifada)\</li\>\<li\>\<i class="fas fa-exclamation-triangle text-warning me-2"\>\</i\>Duración: 4-8 horas\</li\>\<li\>\<i class="fas fa-times text-danger me-2"\>\</i\>Riesgo: Dosis-respuesta impredecible\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="component-card risk-level-medium"\>\<h4\>\<i class="fas fa-skull-crossbones me-2 text-warning"\>\</i\>ADULTERANTES COMUNES\</h4\>\<p\>El Tussy rara vez es 2C-B puro. A menudo contiene un cóctel de:\</p\>\<ul class="list-unstyled"\>\<li\>\<strong\>Ketamina:\</strong\> Disociativo (efecto sedante)\</li\>\<li\>\<strong\>MDMA/Éxtasis:\</strong\> Estimulante/Entactógeno\</li\>\<li\>\<strong\>Cafeína/Lidocaína:\</strong\> Diluyentes/Estimulantes\</li\>\<li\>\<strong\>Opioides Sintéticos:\</strong\> Fentanilo (riesgo de sobredosis FATAL)\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-12"\>\<div class="component-card risk-level-high"\>\<h4\>\<i class="fas fa-pills me-2 text-danger"\>\</i\>Riesgo de DOSIFICACIÓN\</h4\>\<p\>La presencia de adulterantes y la variación en la concentración de 2C-B hacen que cada dosis sea un riesgo impredecible, especialmente si contiene Fentanilo.\</p\>\</div\>\</div\>\</div\>`, preparacion: `\<div class="process-container"\>\<div class="process-step"\>\<div class="method-card risk-level-high"\>\<h4\>Síntesis Clandestina de 2C-B\</h4\>\<p\>Sustancia controlada de Lista I/II. La síntesis se realiza en laboratorios clandestinos con nulo control de calidad. Vía: Bromación de 2,5-dimetoxibenzaldehído.\</p\>\<div class="molecular-structure"\>\<h6\>Reactivos inestables y peligrosos\</h6\>\<div class="chemical-formula"\>2,5-DMBA + Bromo → 2C-B\</div\>\</div\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card risk-level-medium"\>\<h4\>Corte y Mezcla (Adulteración)\</h4\>\<p\>El 2C-B puro es diluido con polvos blancos como ketamina, cafeína, inositol o benzocaína para aumentar el volumen y el margen de ganancia. Esto es donde se introducen los mayores riesgos toxicológicos.\</p\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card risk-level-high"\>\<h4\>Coloración (Presentación)\</h4\>\<p\>Se le añade colorante (generalmente rosa o azul) y aromatizantes (fresa, chicle) para disimular la adulteración y hacerlo más atractivo, especialmente para el mercado joven.\</p\>\<div class="image-placeholder"\>\<i class="fas fa-palette fa-3x"\>\</i\>\<div class="ms-3"\>Polvo rosa ('Tussy')\</div\>\</div\>\</div\>\</div\>\</div\>`, empaquetado: `\<div class="method-card risk-level-medium"\>\<h4\>\<i class="fas fa-box me-2"\>\</i\>Presentación Común\</h4\>\<p\>Se vende típicamente en forma de polvo (rosa, azul o blanco) en pequeños "ziplocs", cápsulas o prensado en pastillas con logos.\</p\>\</div\>\<div class="comparison-table table-responsive mt-4"\>\<table class="table table-bordered text-center"\>\<thead\>\<tr\>\<th\>Sustancia\</th\>\<th\>Forma\</th\>\<th\>Riesgo de Adulteración\</th\>\</tr\>\</thead\>\<tbody\>\<tr class="risk-level-high"\>\<td\>Polvo Rosa/Azul (Tussy)\</td\>\<td\>Bolsitas/Gramo\</td\>\<td\>EXTREMO (casi siempre cortado)\</td\>\</tr\>\<tr class="risk-level-medium"\>\<td\>Pastillas (Nexus)\</td\>\<td\>Comprimidos\</td\>\<td\>Alto (Puede ser MDMA o NBOMe)\</td\>\</tr\>\<tr class="risk-level-low"\>\<td\>Polvo blanco (2C-B HCL)\</td\>\<td\>Botellas/Viales\</td\>\<td\>Moderado (Más probable pureza alta)\</td\>\</tr\>\</tbody\>\</table\>\</div\>`, inhalacion: `\<div class="process-container"\>\<div class="process-step"\>\<div class="method-card risk-level-medium"\>\<h4\>Vía de Administración Oral\</h4\>\<p\>Las pastillas o cápsulas son ingeridas. La absorción es gástrica (lenta) y los efectos tardan 45-90 minutos en aparecer.\</p\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card risk-level-high"\>\<h4\>Vía de Administración Intranasal (Esnifada)\</h4\>\<p\>El polvo es inhalado, lo que resulta en una absorción directa y rápida a través de las membranas mucosas nasales. Esto provoca un inicio de efecto en 5-15 minutos.\</p\>\<div class="warning-box"\>\<small\>\<i class="fas fa-exclamation-triangle me-2"\>\</i\>Esnifar 2C-B (o Tussy adulterado) es extremadamente doloroso y cáustico para las fosas nasales.\</small\>\</div\>\</div\>\</div\>\<div class="process-step"\>\<div class="method-card risk-level-high"\>\<h4\>Riesgo de Sobredosis\</h4\>\<p\>La impredecibilidad de la dosis, especialmente al ser inhalada, incrementa el riesgo de sobredosis de adulterantes como MDMA o Fentanilo.\</p\>\</div\>\</div\>\</div\>`, efectos: `\<div class="warning-box"\>\<h4\>\<i class="fas fa-exclamation-circle text-danger me-2"\>\</i\>Efectos Típicos de la Mezcla\</h4\>\<p\>Los efectos son una combinación de 2C-B (psicodelia) y sus adulterantes (estimulantes y disociativos) en dosis desconocidas.\</p\>\</div\>\<div class="row"\>\<div class="col-md-6"\>\<div class="effect-card risk-level-high"\>\<h4\>\<i class="fas fa-brain text-danger me-2"\>\</i\>Psicológicos y Sensoriales (2C-B)\</h4\>\<ul class="list-unstyled"\>\<li\>Alucinaciones visuales y auditivas intensas.\</li\>\<li\>Pensamiento acelerado/confuso ("rabbitting").\</li\>\<li\>Euforia y empatía (si contiene MDMA).\</li\>\<li\>Ansiedad, paranoia y "mal viaje" (bad trip).\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-6"\>\<div class="effect-card risk-level-high"\>\<h4\>\<i class="fas fa-heartbeat text-danger me-2"\>\</i\>Fisiológicos y Tóxicos (Adulterantes)\</h4\>\<ul class="list-unstyled"\>\<li\>Taquicardia e Hipertensión (Estimulantes).\</li\>\<li\>Hipertermia (Golpe de calor - MDMA).\</li\>\<li\>Náuseas y vómitos.\</li\>\<li\>Riesgo de Síndrome Serotoninérgico (MDMA + otros).\</li\>\<li\>Depresión respiratoria (Fentanilo).\</li\>\</ul\>\</div\>\</div\>\<div class="col-md-12"\>\<div class="health-impact"\>\<h4\>\<i class="fas fa-ambulance me-2"\>\</i\>Urgencia Médica\</h4\>\<p\>Combinar estimulantes y psicodélicos puede llevar a crisis hipertensivas, arritmias y colapso. La presencia de Fentanilo requiere Naloxona inmediata.\</p\>\</div\>\</div\>\</div\>` } }; function updateContent(mode) { document.body.className = mode + '-mode'; const isVaper = mode === 'vaper'; document.getElementById('heroTitle').textContent = isVaper ? 'VAPER: Análisis Químico y Salud' : 'TUSSY (2C-B): Análisis Químico y Riesgos'; document.getElementById('heroSubtitle').textContent = isVaper ? 'Estudio profundo de los componentes químicos, métodos de preparación, empaquetado, inhalación y efectos corporales del vapeo electrónico' : 'Análisis de la composición química, la adulteración, los métodos de consumo y los peligros para la salud asociados al consumo de 2C-B y sus adulterantes'; document.getElementById('stat1Number').textContent = isVaper ? '95%' : '5-30mg'; document.getElementById('stat1Text').textContent = isVaper ? 'Menos tóxico que cigarrillos' : 'Dosis recreacional (2C-B)'; document.getElementById('stat2Number').textContent = isVaper ? '4000+' : '70-90%'; document.getElementById('stat2Text').textContent = isVaper ? 'Compuestos químicos diferentes' : 'Adulteración promedio'; document.getElementById('stat3Number').textContent = isVaper ? '68' : '4-8h'; document.getElementById('stat3Text').textContent = isVaper ? 'Países con regulaciones' : 'Duración del efecto'; document.getElementById('modeText').textContent = isVaper ? 'Cambiar a Tussy' : 'Cambiar a Vaper'; for (const tab in content[mode]) { if (document.getElementById(tab + 'Content')) { document.getElementById(tab + 'Content').innerHTML = content[mode][tab]; } } document.getElementById('componentesTitle').textContent = isVaper ? 'Componentes Químicos del Vaper' : 'Composición Química de Tussy'; document.getElementById('preparacionTitle').textContent = isVaper ? 'Métodos de Preparación' : 'Síntesis y Adulteración'; document.getElementById('empaquetadoTitle').textContent = isVaper ? 'Empaquetado y Conservación' : 'Presentación y Riesgo'; document.getElementById('inhalacionTitle').textContent = isVaper ? 'Proceso de Inhalación' : 'Vías de Administración'; document.getElementById('efectosTitle').textContent = isVaper ? 'Efectos en el Cuerpo' : 'Riesgos y Toxicidad'; } modeToggle.addEventListener('click', () => { currentMode = currentMode === 'vaper' ? 'tussy' : 'vaper'; updateContent(currentMode); }); updateContent('vaper'); document.addEventListener('mouseover', e => { if (e.target.closest('.component-card,.method-card,.statistic-card')) { const card = e.target.closest('.component-card,.method-card,.statistic-card'); card.style.transform = 'translateY(-8px) scale(1.02)'; card.style.boxShadow = '0 15px 35px rgba(0,0,0,.2)'; } }); document.addEventListener('mouseout', e => { if (e.target.closest('.component-card,.method-card,.statistic-card')) { const card = e.target.closest('.component-card,.method-card,.statistic-card'); card.style.transform = 'translateY(-5px) scale(1)'; card.style.boxShadow = '0 5px 15px rgba(0,0,0,.1)'; } }); document.addEventListener('keydown', e => { const tabs = document.querySelectorAll('.nav-link'); const activeTab = document.querySelector('.nav-link.active'); const activeIndex = Array.from(tabs).indexOf(activeTab); if (e.key === 'ArrowRight' && activeIndex < tabs.length - 1) { tabs[activeIndex + 1].click(); } else if (e.key === 'ArrowLeft' && activeIndex > 0) { tabs[activeIndex - 1].click(); } else if (e.key === ' ') { e.preventDefault(); modeToggle.click(); } });</script>
 </body>
+
 </html>

@@ -6,6 +6,7 @@ const presentationFiles = [
     "Exposiciones/carbono-amorfo.html",
     "Exposiciones/deep_learning_introduccion.html",
     "Exposiciones/ciberseguridad_moviles.html",
+    "Exposiciones/proximamente.html",
     // **AQUÍ DEBES AÑADIR LOS NOMBRES DE TUS FUTURAS EXPOSICIONES**
 ];
 
